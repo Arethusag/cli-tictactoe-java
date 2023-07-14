@@ -12,9 +12,20 @@ public class TicTacToe {
         this.state = GameState.RUNNING;
     }
 
-    public boolean movePlayer(Player player, char row, char col) {
-        this.board.makeMove(row,col, player.getSymbol());
+    public void movePlayer(Player player, char row, char col) {
+        if (this.board.makeMove(row, col, player.getSymbol())) {
+            this.board.printBoard();
+        } else {
+            System.out.println("Invalid move.");
+        }
+
     }
 
-    public boolean
+    public boolean winChecker(Player player, char row, char col) {
+        char[][] board = this.board.getBoard();
+
+        //check the row
+        if (board[row][0] == player.getSymbol() &&)
+        }
+    }
 }
